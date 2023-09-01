@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Birthday Database</h1>
+<div class="flexing">
+    <div>
+        <div class="container">
+            <h1>Add Data</h1>
+            <form method="post" action="/AddUser" autocomplete="off">
+                <input type="text" name="name" class="box1" placeholder="Name">
+                <br>
+                <input type="date" name="birthday" class="box1"><br>
+                <input type="submit" value="Submit" class="box1">
+            </form>
+        </div>
+        <div class="search">
+            <h1>Search Name</h1>
+            <form method="get" action="/search" autocomplete="off">
+                <input type="text" name="Name" id="" class="box1" placeholder="Search Name">
+                <input type="submit" placeholder="submit" class="box1">
+            </form>
+            <ol>
+                <% for(var i = 0; i < namesfound.length; i++) { %>
+                <li><%= namesfound[i].birthday %></li>
+                <% } %>
+                
+            </ol>
+            
+        </div>
+        <div class="nextbday">
+            <h1>Next Birthday Calculator</h1>
+            <form action="/closestbday" method="get" autocomplete="off">
+                <input type="submit" name="Submit" class="box1"/>
+            </form>
+        </div>
+        <h1>Update Bday</h1>
+        <form method="post" action="/update" autocomplete="off">
+            <input type="text" name="name" class="box1" placeholder="Name">
+            <br>
+            <input type="date" name="birthday" class="box1"><br>
+            <input type="submit" value="Submit" class="box1">
+        </form>
+        <h1>Delete Bday</h1>
+        <form method="post" action="/delete" autocomplete="off">
+            <input type="text" name="name" class="box1" placeholder="Name">
+            <br>
+            <input type="submit" value="Submit" class="box1">
+        </form>
+    </div>
+    <div class="database">
+    <h1>Data Saved</h1>
+        <ol>
+            <% for(var i = 0; i < data.length; i++) { %>
+                <li><%= data[i].name %> - <%= data[i].birthday %></li>
+            <% } %>
+        </ol>
+        
+    </div>
+</div>
+    
+</body>
+</html>

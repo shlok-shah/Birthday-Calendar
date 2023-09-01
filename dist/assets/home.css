@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    color:white;
+    
+}
+.box1 {
+    background-color: rgb(150, 255, 97);
+    width: 150px;
+    height: 30px;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    margin:5px;
+    padding:5px;
+    color: black;
+}
+
+.heading {
+    text-align: center;
+    font-size: 45px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(36, 36, 36);
+};
+
+
+
+.container {
+    width: 150px;
+}
+
+.flexing {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.database > ol > li {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 400px;
+    border: 2px red solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
